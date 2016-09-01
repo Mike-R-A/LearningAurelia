@@ -1,0 +1,27 @@
+<template>
+    <table class="table table-striped table-responsive">
+        <caption>${completedQualifications.strings.completedQualificationsHeader}</caption>
+        <thead>
+            <tr>
+                <th>${completedQualifications.strings.qualificationDate}</th>
+                <th>${completedQualifications.strings.type}</th>
+                <th>${completedQualifications.strings.subject}</th>
+                <th>${completedQualifications.strings.grade}</th>
+            </tr>
+        </thead>            
+        <tr repeat.for="completedQualification of completedQualifications">
+            <td>
+                <input class="form-control" type="text" value.bind="completedQualification.qualificationDate">
+            </td>
+            <td>
+                <input class="form-control" type="text" value.bind="completedQualification.type">
+            </td>
+            <td>
+                <input class="form-control" type="text" value.bind="completedQualification.subject">
+            </td>
+            <td>
+                <input class="form-control" type="text" value.bind="completedQualification.grade">
+            </td>
+        </tr>
+    </table>
+</template>

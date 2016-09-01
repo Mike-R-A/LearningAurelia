@@ -1,0 +1,31 @@
+<template>
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">${strings.sectionHeader}</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Escalate
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><input type=text></li>
+                </ul>
+                </li>           
+                <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="DecisionDropdownText">${decisionDetails.decision || "Pending decision"}</span>
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#/applicationform" click.delegate="OnUnConditionalClick()">Unconditional</a></li>
+                    <li><a href="#/applicationform" click.delegate="OnConditionalClick()">Conditional</a></li>
+                    <li><a href="#/applicationform" click.delegate="OnRejectClick()">Reject</a></li>
+                    <li><a href="#/applicationform" click.delegate="OnPendingClick()">Pending decision</a></li>
+                </ul>
+                </li>
+                <li>
+                    <input type="text" if.bind="isConditional"></input>    
+                </li>             
+            </ul>
+        </div>
+    </nav>
+</template>

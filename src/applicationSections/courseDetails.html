@@ -1,0 +1,40 @@
+<template>
+    <require from="./labelInputPair.html"></require>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                ${strings.sectionHeader}
+            </div>
+            <div class="panel-body">
+                <div class="form-group">        
+                    <div class="row">
+                        <labelInputPair label.bind="strings.course" value.bind="courseDisplayName" labelGridClass.bind="col-md-2" inputGridClass.bind="col-md-4"></labelInputPair>
+                        <labelInputPair label.bind="strings.entryLevel" value.bind="courseDetails.entryLevel" labelGridClass.bind="col-md-2" inputGridClass.bind="col-md-4"></labelInputPair>
+                    </div>
+                    <div class="row">
+                        <labelInputPair label.bind="strings.yearOfEntry" value.bind="courseDetails.yearOfEntry" labelGridClass.bind="col-md-2" inputGridClass.bind="col-md-4"></labelInputPair>
+                        <labelInputPair label.bind="strings.monthOfEntry" value.bind="courseDetails.monthOfEntry" labelGridClass.bind="col-md-2" inputGridClass.bind="col-md-4"></labelInputPair>
+                    </div>
+                    <div class="row">
+                        <labelInputPair label.bind="strings.choice" value.bind="courseDetails.choice" labelGridClass.bind="col-md-2" inputGridClass.bind="col-md-4"></labelInputPair>
+                        <labelInputPair label.bind="strings.applicationSchemeCode" value.bind="courseDetails.applicationSchemeCode" labelGridClass.bind="col-md-2" inputGridClass.bind="col-md-4"></labelInputPair>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="applicationsThisCycleCourseCode">${strings.applicationsThisCycleCourseCode}</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input class="form-control" id="applicationsThisCycleCourseCode" type="text" value.bind="courseDetails.applicationsThisCycleCourseCode">                    
+                        </div>
+                        <div class="col-md-2">
+                            <label for="applicationsPreviousCyclesCourseCode">${strings.applicationsPreviousCyclesCourseCode}</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input class="form-control" id="applicationsPreviousCyclesCourseCode" type="text" value.bind="courseDetails.applicationsPreviousCyclesCourseCode">               
+                        </div>
+                    </div>            
+                </div>
+            </div>
+        </div>
+    </div>     
+</template>

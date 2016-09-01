@@ -1,0 +1,23 @@
+<template>
+    <table class="table table-striped table-responsive">
+        <caption>${incompleteQualifications.strings.incompleteQualificationsHeader}</caption>
+        <thead>
+            <tr>
+                <th>${incompleteQualifications.strings.qualificationDate}</th>
+                <th>${incompleteQualifications.strings.type}</th>
+                <th>${incompleteQualifications.strings.subject}</th>
+            </tr>
+        </thead>            
+        <tr repeat.for="incompleteQualification of incompleteQualifications">
+            <td>
+                <input class="form-control" type="text" value.bind="incompleteQualification.qualificationDate">
+            </td>
+            <td>
+                <input class="form-control" type="text" value.bind="incompleteQualification.type">
+            </td>
+            <td>
+                <input class="form-control" type="text" value.bind="incompleteQualification.subject">
+            </td>
+        </tr>
+    </table>
+</template>

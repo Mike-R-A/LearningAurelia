@@ -1,0 +1,41 @@
+<template>
+    <require from="./labelInputPair.html"></require>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                ${strings.sectionHeader}
+            </div>
+            <div class="panel-body">
+                <div class="form-group">        
+                    <div class="row">
+                        <labelInputPair label.bind="strings.ucasPersonalId" value.bind="personalDetails.ucasPersonalId" labelGridClass="col-md-2" inputGridClass="col-md-4"></labelInputPair>
+                        <div class="col-md-2">
+                            <label for="dateOfBirth">${strings.dateOfBirth}</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input id="dateOfBirth" class="form-control" type="text" value.bind="personalDetails.dateOfBirth">               
+                            Age: ${age}
+                        </div> 
+                    </div>
+                    <div class="row">
+                        <labelInputPair label.bind="strings.firstname" value.bind="personalDetails.firstname" labelGridClass="col-md-2" inputGridClass="col-md-4"></labelInputPair>
+                        <labelInputPair label.bind="strings.surname" value.bind="personalDetails.surname" labelGridClass="col-md-2" inputGridClass="col-md-4"></labelInputPair>
+                    </div>
+                    <div class="row">
+                        <labelInputPair label.bind="strings.title" value.bind="personalDetails.title" labelGridClass="col-md-2" inputGridClass="col-md-4"></labelInputPair>
+                        <labelInputPair label.bind="strings.gender" value.bind="personalDetails.gender" labelGridClass="col-md-2" inputGridClass="col-md-4"></labelInputPair>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="wantsWelshCommunication">${strings.wantsWelshCommunication}</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input class="form-control" id="wantsWelshCommunication" type="text" value.bind="personalDetails.wantsWelshCommunication">               
+                        </div>
+                    </div>            
+                </div>
+            </div>
+        </div> 
+    </div>
+    
+</template>

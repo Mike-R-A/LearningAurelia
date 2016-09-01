@@ -1,0 +1,16 @@
+td input.form-control {
+    display: block;
+    width: 100%;
+    background-color: inherit;
+}
+
+body { 
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+.panel-heading.row {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}

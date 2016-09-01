@@ -1,0 +1,32 @@
+<template>
+    <div class="container-fluid">
+        <div class="panel panel-default">
+            <div class="panel-heading row">
+                <div class="col-md-10">
+                    ${courseDetailsSection.courseDetails.courseCode} - 
+                    ${courseDetailsSection.courseDetails.courseTitle} -
+                    Level ${courseDetailsSection.courseDetails.entryLevel} - 
+                    ${courseDetailsSection.courseDetails.monthOfEntry}
+                    ${courseDetailsSection.courseDetails.yearOfEntry} - 
+                    ${personalDetailsSection.personalDetails.firstname}
+                    ${personalDetailsSection.personalDetails.surname} - 
+                    ${personalDetailsSection.personalDetails.ucasPersonalId}/${courseDetailsSection.courseDetails.choice}
+                </div>               
+                <div class="col-md-2">
+                    <compose view-model="applicationSections/confirmationTools" view.bind="applicationSections/confirmationTools.html" model.bind="applicationForm"></compose>
+                </div>                     
+            </div>
+            <div class="panel-body">
+                <div class="col-md-4">
+                   <compose view-model="applicationSections/completedQualificationsTable" view.bind="applicationSections/completedQualificationsTable.html", model.bind="completedQualifications"></compose>
+                </div>
+                <div class="col-md-4">
+                   <compose view-model="applicationSections/incompleteQualificationsTable" view.bind="applicationSections/incompleteQualificationsTable.html", model.bind="incompleteQualifications"></compose>
+                </div>
+                <div class="col-md-4">
+                   <compose view-model="applicationSections/resultsTable" view.bind="applicationSections/resultsTable.html", model.bind="results"></compose>
+                </div>
+            </div>      
+        </div>
+    </div>   
+</template>

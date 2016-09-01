@@ -1,0 +1,27 @@
+<template>
+    <table class="table table-striped table-responsive">
+        <caption>${results.strings.resultsHeader}</caption>
+        <thead>
+            <tr>
+                <th>${results.strings.qualificationDate}</th>
+                <th>${results.strings.type}</th>                
+                <th>${results.strings.subject}</th>
+                <th>${results.strings.grade}</th>
+            </tr>
+        </thead>            
+        <tr repeat.for="result of results">
+            <td>
+                <input class="form-control" type="text" value.bind="result.qualificationDate">
+            </td>
+            <td>
+                <input class="form-control" type="text" value.bind="result.type">
+            </td>
+            <td>
+                <input class="form-control" type="text" value.bind="result.subject">
+            </td>
+            <td>
+                <input class="form-control" type="text" value.bind="result.grade">
+            </td>
+        </tr>
+    </table>
+</template>
