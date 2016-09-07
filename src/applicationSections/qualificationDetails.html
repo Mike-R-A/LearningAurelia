@@ -1,32 +1,42 @@
 <template>
-    <div class="col-md-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                ${strings.predictedGrades}
-            </div>
-            <div class="panel-body">
-                <div class="form-group">
-                        ${predictedGrades}    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    ${strings.predictedGrades}
                 </div>
-            </div>       
+                <div class="panel-body">
+                    <div class="form-group">
+                            ${predictedGrades}    
+                    </div>
+                </div>       
+            </div>
         </div>
     </div>
     
-<div class="col-md-12">
-    <div class="panel panel-default">      
-        <div class="panel-heading">
-            ${strings.sectionHeader}
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">      
+            <div class="panel-heading">
+                ${strings.sectionHeader}
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <compose view-model="applicationSections/incompleteQualificationsTable" view.bind="incompleteQualificationsTable.html" model.bind="incompleteQualifications"></compose>          
+                    </div>
+                    <div class="col-md-6">
+                        <compose view-model="applicationSections/resultsTable" view.bind="resultsTable.html" model.bind="results"></compose>          
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <compose view-model="applicationSections/completedQualificationsTable" view.bind="completedQualificationsTable.html" model.bind="completedQualifications"></compose>          
+                    </div>
+                </div>          
+            </div>      
         </div>
-        <div class="panel-body">
-            <div class="col-md-9">
-                <compose view-model="applicationSections/incompleteQualificationsTable" view.bind="incompleteQualificationsTable.html" model.bind="incompleteQualifications"></compose>          
-            </div>
-            <div class="col-md-3">
-            </div>
-            <div class="col-md-12">
-                <compose view-model="applicationSections/completedQualificationsTable" view.bind="completedQualificationsTable.html" model.bind="completedQualifications"></compose>          
-            </div>
-        </div>      
     </div>
-</div>
+</div> 
+
 </template>

@@ -1,0 +1,5 @@
+<template>
+    <div repeat.for="applicationForm of applicationForms">
+        <compose view-model="applicationSections/applicationRow" view.bind="applicationSections/applicationRow.html" model.bind="applicationForm"></compose>
+    </div>
+</template>

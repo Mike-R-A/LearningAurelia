@@ -1,15 +1,25 @@
 <template>
     <div class="container-fluid">
         <form class="form-inline">
-            <div>
-                <compose view-model="applicationSections/personalDetails" view.bind="applicationSections/personalDetails.html" model.bind="personalDetailsSection"></compose>
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <compose view-model="applicationSections/personalDetails" view.bind="applicationSections/personalDetails.html" model.bind="personalDetailsSection"></compose>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <compose view-model="applicationSections/courseDetails" view.bind="applicationSections/courseDetails.html" model.bind="courseDetailsSection"></compose>
+                    </div>
+                </div>              
             </div>
-            <div>
-                <compose view-model="applicationSections/courseDetails" view.bind="applicationSections/courseDetails.html" model.bind="courseDetailsSection"></compose>
-            </div>
-            <div>
-                <compose view-model="applicationSections/qualificationDetails" view.bind="applicationSections/qualificationDetails.html" model.bind="qualificationDetailsSection"></compose>
-            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <compose view-model="applicationSections/qualificationDetails" view.bind="applicationSections/qualificationDetails.html" model.bind="qualificationDetailsSection"></compose>
+                    </div>
+                </div>            
+            </div>        
         </form>
     </div>
     <compose view-model="applicationSections/toolBar" view.bind="applicationSections/toolBar.html" model.bind="applicationForm"></compose>

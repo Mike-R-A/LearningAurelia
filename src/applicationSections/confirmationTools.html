@@ -1,4 +1,15 @@
 <template>
-    <button class="button"></button>
-    <button class="button"></button>
+    <span>${decisionPostResultsDisplayText}</span>
+    <span if.bind="!applicationForm.decisionPostResults">
+        <button id="metAcceptButton" class="btn btn-success" click.delegate="metAcceptButtonClicked()">Met</button>
+        <button id="notMetAcceptButton" class="btn btn-success" click.delegate="notMetAcceptButtonClicked()">Not Met - Accept</button>
+        <button id="notMetHoldButton" class="btn btn-warning" click.delegate="notMetHoldButtonClicked()">Not Met - Hold</button>
+        <button id="notMetRejectButton" class="btn btn-danger" click.delegate="notMetRejectButtonClicked()">Not Met - Reject</button>
+    </span>
+    <span if.bind="applicationForm.decisionPostResults">
+        <button id="resetButton" class="btn" click.delegate="resetButtonClicked()">Reset</button>
+    </span>
+    <button if.bind="!applicationForm.showPanelBody" id="expandButton" class="btn" click.delegate="expandButtonClicked()">Expand</button>
+    <button if.bind="applicationForm.showPanelBody" id="collapseButton" class="btn" click.delegate="collapseButtonClicked()">Collapse</button> 
+ 
 </template>
